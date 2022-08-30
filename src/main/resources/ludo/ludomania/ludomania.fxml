@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="windowMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ludo.ludomania.Board">
+   <children>
+      <AnchorPane id="board" fx:id="boardMain" prefHeight="600.0" prefWidth="900.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="imageBoard" fitHeight="600.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/plansza.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="blueLeader" fitHeight="36.0" fitWidth="36.0" layoutX="102.0" layoutY="426.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/checkers/BlueLeader.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="blueSprinter" fitHeight="36.0" fitWidth="36.0" layoutX="138.0" layoutY="426.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/checkers/BlueSprinter.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="blueSoldier0" fitHeight="36.0" fitWidth="36.0" layoutX="102.0" layoutY="462.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/checkers/BlueNormal.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="blueSoldier1" fitHeight="36.0" fitWidth="36.0" layoutX="138.0" layoutY="462.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/checkers/BlueNormal.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="redLeader" fitHeight="36.0" fitWidth="36.0" layoutX="102.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/checkers/RedLeader.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="redSprinter" fitHeight="36.0" fitWidth="36.0" layoutX="138.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/checkers/RedSprinter.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="redSoldier0" fitHeight="36.0" fitWidth="36.0" layoutX="102.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/checkers/RedNormal.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="redSoldier1" fitHeight="36.0" fitWidth="36.0" layoutX="138.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/checkers/RedNormal.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="greenLeader" fitHeight="36.0" fitWidth="36.0" layoutX="426.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/checkers/GreenLeader.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="greenSprinter" fitHeight="36.0" fitWidth="36.0" layoutX="462.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/checkers/GreenSprinter.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="greenSoldier0" fitHeight="36.0" fitWidth="36.0" layoutX="426.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/checkers/GreenNormal.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="greenSoldier1" fitHeight="36.0" fitWidth="36.0" layoutX="462.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/checkers/GreenNormal.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="yellowLeader" fitHeight="36.0" fitWidth="36.0" layoutX="426.0" layoutY="426.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/checkers/YellowLeader.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="yellowSprinter" fitHeight="36.0" fitWidth="36.0" layoutX="464.0" layoutY="425.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/checkers/YellowSprinter.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="yellowSoldier0" fitHeight="36.0" fitWidth="36.0" layoutX="426.0" layoutY="462.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/checkers/YellowNormal.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="yellowSoldier1" fitHeight="36.0" fitWidth="36.0" layoutX="462.0" layoutY="462.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/checkers/YellowNormal.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="Button0" layoutX="102.0" layoutY="102.0" maxHeight="36.0" maxWidth="36.0" minHeight="36.0" minWidth="36.0" mnemonicParsing="false" onAction="#moveChecker" prefHeight="36.0" prefWidth="36.0" style="-fx-background-color: transparent; -fx-font-size: 0.1;" text="0" />
+            <Button fx:id="Button1" layoutX="138.0" layoutY="102.0" maxHeight="36.0" maxWidth="36.0" minHeight="36.0" minWidth="36.0" mnemonicParsing="false" onAction="#moveChecker" prefHeight="36.0" prefWidth="36.0" style="-fx-background-color: transparent; -fx-font-size: 0.1;" text="1" />
+            <Button fx:id="Button2" layoutX="102.0" layoutY="138.0" maxHeight="36.0" maxWidth="36.0" minHeight="36.0" minWidth="36.0" mnemonicParsing="false" onAction="#moveChecker" prefHeight="36.0" prefWidth="36.0" style="-fx-background-color: transparent; -fx-font-size: 0.1;" text="2" />
+            <Button fx:id="Button3" layoutX="138.0" layoutY="138.0" maxHeight="36.0" maxWidth="36.0" minHeight="36.0" minWidth="36.0" mnemonicParsing="false" onAction="#moveChecker" prefHeight="36.0" prefWidth="36.0" style="-fx-background-color: transparent; -fx-font-size: 0.1;" text="3" />
+            <Text fx:id="redName" layoutX="102.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="122.0" />
+            <Text fx:id="greenName" layoutX="426.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="122.0" />
+            <Text fx:id="blueName" layoutX="102.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="122.0" />
+            <Text fx:id="yellowName" layoutX="426.0" layoutY="421.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="122.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane id="RightMenu" fx:id="sidebarMain" layoutX="600.0" prefHeight="600.0" prefWidth="300.0" style="-fx-background-color: #eee;" visible="false">
+         <children>
+            <Button fx:id="buttonThrow" layoutX="70.0" layoutY="525.0" minHeight="36.0" minWidth="150.0" mnemonicParsing="false" onAction="#handleDiceRollButton" prefHeight="36.0" prefWidth="150.0" style="-fx-background-color: #dddddd; -fx-border-color: #ffffff;" text="RZUĆ" />
+            <TableView fx:id="scoreboard" layoutX="10.0" layoutY="14.0" maxWidth="290.0" prefHeight="200.0" prefWidth="280.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="14.0">
+              <columns>
+                <TableColumn fx:id="playerName" maxWidth="240.0" prefWidth="220.0" text="Nazwa gracza" />
+                  <TableColumn fx:id="pieceFinish" maxWidth="60.0" prefWidth="58.0" text="Meta" />
+              </columns>
+            </TableView>
+            <Button fx:id="buttonLos" layoutX="60.0" layoutY="287.0" mnemonicParsing="false" onAction="#handleButtonLos" prefHeight="80.0" prefWidth="180.0" style="-fx-background-color: #faa0e6; -fx-font-size: 16; -fx-font-weight: 800; -fx-border-color: #f5c4ea; -fx-border-radius: 6; -fx-text-fill: #470538;" text="Los" wrapText="true" />
+            <ImageView fx:id="diceImage" fitHeight="100.0" fitWidth="100.0" layoutX="100.0" layoutY="396.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/dices/base.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="90.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Obecny gracz:" textAlignment="CENTER" wrappingWidth="109.60000000000014">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="currentPlayerText" layoutX="69.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Czerwony" textAlignment="CENTER" wrappingWidth="150.39999999999986" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="startMenu" prefHeight="600.0" prefWidth="900.0">
+         <children>
+            <TextField fx:id="redText" layoutX="718.0" layoutY="241.0" />
+            <TextField fx:id="greenText" layoutX="718.0" layoutY="288.0" />
+            <TextField fx:id="yellowText" layoutX="718.0" layoutY="334.0" />
+            <TextField fx:id="blueText" layoutX="718.0" layoutY="378.0" />
+            <CheckBox fx:id="redCheck" layoutX="626.0" layoutY="245.0" mnemonicParsing="false" text="Red" />
+            <CheckBox fx:id="greenCheck" layoutX="626.0" layoutY="292.0" mnemonicParsing="false" text="Green" />
+            <CheckBox fx:id="yellowCheck" layoutX="626.0" layoutY="338.0" mnemonicParsing="false" text="Yellow" />
+            <CheckBox fx:id="blueCheck" layoutX="626.0" layoutY="382.0" mnemonicParsing="false" text="Blue" />
+            <Button fx:id="start" layoutX="622.0" layoutY="436.0" mnemonicParsing="false" onAction="#handleGameStartButton" prefHeight="25.0" prefWidth="250.0" style="-fx-background-color: white; -fx-border-color: #dedede; -fx-border-width: 4px; -fx-border-radius: 7px;" text="Start" />
+            <Text fx:id="textErrorMsg" layoutX="600.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 18; -fx-fill: #ff0000;" wrappingWidth="250.0" />
+            <ImageView fitHeight="600.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/imgStart.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="endGameScreen" prefHeight="600.0" prefWidth="900.0" visible="false">
+         <children>
+            <Text fx:id="gameEndText" layoutX="655.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="217.0" />
+            <Button fx:id="gameRestartButton" layoutX="697.0" layoutY="447.0" mnemonicParsing="false" onAction="#handleRestartButton" prefHeight="33.0" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: #dedede; -fx-border-width: 4px; -fx-border-radius: 7px;" text="Restart" />
+            <ImageView fitHeight="600.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/endGame.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
